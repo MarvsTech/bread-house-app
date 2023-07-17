@@ -1,8 +1,151 @@
-body {
-    background-color: red;
-}
+.sidebar {
+    background-color: $secondary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+    width: 20rem;
+    height: 100vh;
+    border-right: 3px solid rgb(3 60 60 / 10%);
 
-.scssClass {
-    @include font-format;
-    color: green;
+    .logo-container {
+        @include center-object;
+        justify-content: flex-start;
+
+        h2 {
+            font-size: 20px;
+            font-family: $primary-font;
+            color: $primary-color;
+            padding: 0 0 0 1rem;
+        }
+
+        &.active {
+            h2 {
+                opacity: 0;
+            }
+        }
+    }
+
+    .burger-container {
+        content: "";
+        background-color: $main-color;
+        position: absolute;
+        right: (-35px/2);
+        top: (9rem/1.15);
+        width: 30px;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 35px;
+            top: (35px/2);
+            z-index: 0;
+            width: calc(6rem + 15rem);
+            background-color: $main-color;
+            height: 2px;
+        }
+
+        .burger-trigger {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background-color: red;
+            cursor: pointer;
+            z-index: 6;
+            opacity: 0;
+            position: relative;
+        }
+
+        .burger-menu {
+            content: "";
+            background-color: $main-color;
+            position: relative;
+            z-index: 1;
+            width: 15px;
+            height: 3px;
+            border-radius: 2rem;
+            bottom: calc(35px/2);
+            left: 0.45rem;
+            transition: 0.5s all;
+
+            &::after {
+                @include custom-icon;
+                top: 0.4rem;
+                transform: translateY(-0.4rem) rotate(45deg);
+                transition: 0.5s all;
+            }
+            &::before {
+                @include custom-icon;
+                top: -0.4rem;
+                transform: translateY(0.4rem) rotate(-45deg);
+                transition: 0.5s all;
+            }
+        }
+
+        &.active {
+            .burger-menu {
+                background-color: #fff;
+
+                &::after {
+                    transform: translateY(0rem) rotate(0deg);
+                    transition: 0.5s all;
+                }
+                &::before {
+                    transform: translateY(0rem) rotate(0deg);
+                    transition: 0.5s all;
+                }
+            }
+        }
+    }
+
+    .content-container {
+        position: relative;
+        top: 5rem;
+
+        ul {
+            @include custom-ul;
+
+            li {
+                @include center-object;
+                justify-content: flex-start;
+                flex-direction: row;
+                margin: 0.75rem 0;
+                padding: 0.75rem 0;
+                width: 100%;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                svg {
+                    padding: 0 1rem 0 0;
+                    width: 100px;
+                }
+
+                a {
+                    @include center-object;
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 20px;
+                    justify-content: space-between;
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+        }
+
+        &.active {
+
+            li {
+                width: unset;
+            }
+            a {
+                opacity: 0;
+            }
+        }
+    }
+
+    // ACTIVE STATE
+    &.active {
+        transition: 0.5s all;
+        width: 10rem;
+    }
 }

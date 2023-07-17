@@ -1,10 +1,23 @@
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Sidebar from './components/Sidebar';
+import Contact from './pages/Contact';
+import Dashboard from './pages/Dashboard';
 
-function App() {
+const App = () => {
   return (
-    <div className="scssClass">
-      <h2>React Js SASS / SCSS Example</h2>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Sidebar/>
+
+        <Routes>
+          <Route path="/" element={<Dashboard/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+        </Routes>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App

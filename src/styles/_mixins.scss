@@ -1,3 +1,28 @@
 @mixin font-format {
     font-family: $primary-font;
 }
+
+@mixin center-object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin custom-icon {
+    content: "";
+    background-color: $secondary-color;
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    border-radius: 2rem;
+}
+
+@mixin custom-ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
