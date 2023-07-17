@@ -1,4 +1,5 @@
 .sidebar {
+    
     background-color: $secondary-color;
     position: absolute;
     top: 0;
@@ -7,6 +8,11 @@
     width: 20rem;
     height: 100vh;
     border-right: 3px solid rgb(3 60 60 / 10%);
+
+    @include mobile-responsive {
+        width: 5rem;
+        padding: 0;
+    }
 
     .logo-container {
         @include center-object;
@@ -22,6 +28,17 @@
         &.active {
             h2 {
                 opacity: 0;
+            }
+        }
+
+        @include mobile-responsive {
+            display: block;
+            position: relative;
+            top: 40px;
+            left: 9px;
+
+            h2 {
+                display: none;
             }
         }
     }
@@ -106,6 +123,22 @@
         ul {
             @include custom-ul;
 
+            #desktop {
+                display: flex;
+            }
+            #mobile {
+                display: none;
+            }
+
+            @include mobile-responsive {
+                #desktop {
+                    display: none;
+                }
+                #mobile {
+                    display: block;
+                }
+            }
+
             li {
                 @include center-object;
                 justify-content: flex-start;
@@ -128,6 +161,16 @@
                     font-size: 20px;
                     justify-content: space-between;
                     margin: 0 0 0 0.5rem;
+                }
+
+                @include mobile-responsive {
+                    display: block;
+
+                    a {
+                        font-size: 15px;
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
             }
         }

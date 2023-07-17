@@ -26,3 +26,9 @@
     padding: 0;
     margin: 0;
 }
+
+@mixin mobile-responsive {
+    @media (max-width: $breakpoint-small) {
+        @content;
+    }
+}

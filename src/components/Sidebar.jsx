@@ -31,9 +31,13 @@ const Sidebar = () => {
       </div>
       <div className={closeMenu === false ? "content-container" : "content-container active"}>
         <ul>
-          <li className="active">
+          <li className={location.pathname === "/" ? "active" : ""} id="desktop">
             <FiGrid size={32} />
             <a href="/">Dashboard</a>
+          </li>
+          <li className={location.pathname === "/" ? "active" : ""} id="mobile">
+            <FiGrid size={32} />
+            <a href="/">Home</a>
           </li>
           <li>
             <FiFlag size={32} />
