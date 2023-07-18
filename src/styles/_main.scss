@@ -9,11 +9,6 @@
     height: 100vh;
     border-right: 3px solid rgb(3 60 60 / 10%);
 
-    @include mobile-responsive {
-        width: 5rem;
-        padding: 0;
-    }
-
     .logo-container {
         @include center-object;
         justify-content: flex-start;
@@ -27,7 +22,11 @@
 
         &.active {
             h2 {
-                opacity: 0;
+                display: none;
+            }
+
+            @include mobile-responsive {
+                display: none;
             }
         }
 
@@ -38,6 +37,10 @@
             left: 9px;
 
             h2 {
+                display: none;
+            }
+
+            &.active {
                 display: none;
             }
         }
@@ -130,15 +133,6 @@
                 display: none;
             }
 
-            @include mobile-responsive {
-                #desktop {
-                    display: none;
-                }
-                #mobile {
-                    display: block;
-                }
-            }
-
             li {
                 @include center-object;
                 justify-content: flex-start;
@@ -173,6 +167,15 @@
                     }
                 }
             }
+
+            @include mobile-responsive {
+                #desktop {
+                    display: none;
+                }
+                #mobile {
+                    display: block;
+                }
+            }
         }
 
         &.active {
@@ -183,6 +186,10 @@
             a {
                 opacity: 0;
             }
+
+            @include mobile-responsive {
+                display: none;
+            }
         }
     }
 
@@ -190,5 +197,19 @@
     &.active {
         transition: 0.5s all;
         width: 10rem;
+    }
+
+    @include mobile-responsive {
+        width: 5rem;
+        padding: 0;
+
+        &.active {
+            transition: 0.5s all;
+            width: 1rem;
+
+            .logo-container {
+                display: none;
+            }
+        }
     }
 }
