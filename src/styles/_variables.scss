@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$primary-font: 'Poppins', sans-serif;
+$primary-font: "Poppins", sans-serif;
 
-$primary-color: #000;
-$secondary-color: #fff;
+// color
+$primary-color: #fff;
+$secondary-color: #000;
 $main-color: #033C3C;
+$body-color: #D9D9D9;
 
-$breakpoint-small: 600px; 
-$breakpoint-medium: 768px;
-$breakpoint-large: 992px; 
-$breakpoint-extra-large: 1200px;
+// Text font size
+$paragraph: 16px;
+$heading: 30px;
+$sub-heading: 20px;
+$small-heading: 15px;

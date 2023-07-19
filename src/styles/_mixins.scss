@@ -1,34 +1,130 @@
-@mixin font-format {
+@mixin custom-sub-heading {
+    font-size: $paragraph;
+    font-weight: bold;
+    color: $main-color;
+    font-family: $primary-font;
+    text-transform: uppercase;
+}
+
+@mixin custom-text {
+    font-size: $paragraph;
     font-family: $primary-font;
 }
 
-@mixin center-object {
+@mixin custom-card {
+    width: 100%; 
+    height: 257px !important; 
+    left: 0px; 
+    top: 0px; 
+    background: $primary-color; 
+    border-radius: 10px !important; 
+    border: 0.50px $main-color solid !important;
+}
+
+@mixin custom-blur-background {
+    width: 154px; 
+    height: 19px; 
+    left: 21px; 
+    top: 97px; 
+    position: relative; 
+    background: rgba(0, 0, 0, 0.20); 
+    box-shadow: 9px 9px 9px; 
+    border-radius: 9999px; 
+    filter: blur(9px);
+}
+
+@mixin custom-product-image {
+    width: 186px; 
+    height: 114px; 
+    left: 11px; 
+    position: relative;
+}
+
+@mixin custom-product-name {
+    left: 10px; 
+    top: 153px; 
+    position: absolute; 
+    color: $secondary-color; 
+    font-size: $sub-heading; 
+    font-family: $primary-font; 
+    font-weight: 500; 
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+@mixin custom-product-price {
+    left: 12px; 
+    top: 177px; 
+    position: absolute;
+    color: $secondary-color; 
+    font-size: $small-heading; 
+    font-family: $primary-font; 
+    font-weight: 500; 
+    word-wrap: break-word;
+}
+
+@mixin custom-product-price-span {
+    color: $main-color; 
+    font-size: $small-heading; 
+    font-family: $primary-font; 
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+@mixin custom-star-container {
+    width: 60px; 
+    height: 16.67px; 
+    left: 12px; 
+    top: 223px; 
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@mixin custom-product-rating {
+    width: 38px; 
+    height: 12px; 
+    left: 22px; 
+    top: 0px; 
+    position: absolute; 
+    color: $main-color; 
+    font-size: $small-heading; 
+    font-family: $primary-font; 
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+@mixin custom-plus-col {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin custom-plus-btn {
+    background-color: $main-color;
+    border-radius: 50px;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: $sub-heading;
+    padding: 3px;
 }
 
 @mixin custom-icon {
     content: "";
-    background-color: $secondary-color;
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: transparent $secondary-color transparent transparent;
     position: absolute;
-    width: 15px;
-    height: 3px;
-    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@mixin custom-ul {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-@mixin mobile-responsive {
-    @media (max-width: $breakpoint-small) {
-        @content;
-    }
+@mixin custom-carousel-control {
+    background-image: unset !important;
+    color: #000;
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
 }
