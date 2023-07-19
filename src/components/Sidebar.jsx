@@ -1,72 +1,74 @@
-import React, {useState} from 'react'
-import Logo from '../images/svg/logo.png';
+import React, { useState } from 'react'
+import { 
+    FiHome,
+    FiCompass,
+    FiShoppingBag,
+    FiBook,
+    FiSend,
+    FiMenu
+} from "react-icons/fi";
+import { NavLink } from 'react-router-dom';
+import Logo from '../img/logo.png';
+import ContactCard from './ContactCard';
 
-import { FiGrid } from "react-icons/fi";
-import { FiFlag } from "react-icons/fi";
-import { FiBookmark } from "react-icons/fi";
-import { FiShoppingCart } from "react-icons/fi";
-import { FiShoppingBag } from "react-icons/fi";
-import { FiSend } from "react-icons/fi";
-import { FiSettings } from "react-icons/fi";
+const Sidebar = ({children}) => {
+    const[isOpen, setIsOpen] = useState(true);
+    const toggle = () => setIsOpen(!isOpen);
+    const menuItem = [
+        {
+            path: "/",
+            name: "Dashboard",
+            icon: <FiHome />,
+        },{
+            path: "/explore",
+            name: "Explore",
+            icon: <FiCompass />,
+        },{
+            path: "/cart",
+            name: "Cart",
+            icon: <FiShoppingBag />,
+        },{
+            path: "/purchase/history",
+            name: "Purchase History",
+            icon: <FiBook />,
+        },{
+            path: "/contact",
+            name: "Contact us",
+            icon: <FiSend />,
+        }
+    ]
 
-import { useLocation } from 'react-router-dom';
+    return (
+        <>
+            <div className='sidebar' style={{ width: isOpen ? "300px" : "50px" }}>
+                <div className="top_section">
+                    <div className='logo-container' style={{ display: isOpen ? "block" : "none" }}>
+                        <img src={Logo} alt="Logo" />
+                        <h1 className='logo'>BREADHOUSE</h1>
+                    </div>
+                    <div className="bars" style={{marginLeft: isOpen ? "5px" : "0px"}}>
+                        <FiMenu onClick={toggle}/>
+                    </div>
+                </div>
+                {
+                    menuItem.map((item, index) => (
+                        <NavLink to={item.path} key={index} className="navbar-link" activeclassName='active'>
+                            <div className="icon">{item.icon}</div>
+                            <div className="link-text" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
+                        </NavLink>
+                    ))
+                }
 
-const Sidebar = () => {
+                <div className="contact-us" style={{ display: isOpen ? "block" : "none" }}>
+                    <ContactCard />
+                </div>
+            </div>
 
-  const location = useLocation();
-  const [closeMenu, setCloseMenu] = useState(false);
-  const handleCloseMenu = () => {
-    setCloseMenu(!closeMenu);
-  }
-
-  return (
-    <div className={closeMenu === false ? "sidebar" : "sidebar active"}>
-      <div className={closeMenu === false ? "logo-container" : "logo-container active"}>
-        <img src={Logo} alt="icon" className="logo"/>
-        <h2 className="title">BreadHouse</h2>
-      </div>
-      <div className={closeMenu === false ? "burger-container" : "burger-container active"}>
-        <div className="burger-trigger" onClick={()=>{handleCloseMenu()}}></div>
-        <div className="burger-menu"></div>
-      </div>
-      <div className={closeMenu === false ? "content-container" : "content-container active"}>
-        <ul>
-          <li className={location.pathname === "/" ? "active" : ""} id="desktop">
-            <FiGrid size={32} />
-            <a href="/">Dashboard</a>
-          </li>
-          <li className={location.pathname === "/" ? "active" : ""} id="mobile">
-            <FiGrid size={32} />
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <FiFlag size={32} />
-            <a href="/">Explore</a>
-          </li>
-          <li>
-            <FiBookmark size={32} />
-            <a href="/">Saved</a>
-          </li>
-          <li>
-            <FiShoppingCart size={32} />
-            <a href="/">Cart</a>
-          </li>
-          <li>
-            <FiShoppingBag size={32} />
-            <a href="/">Selling</a>
-          </li>
-          <li>
-            <FiSend size={32} />
-            <a href="/">Contact</a>
-          </li>
-          <li>
-            <FiSettings size={32} />
-            <a href="/">Settings</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  )
+            <main>
+                {children}
+            </main>
+        </>  
+    )
 }
 
 export default Sidebar

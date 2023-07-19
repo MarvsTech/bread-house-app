@@ -1,23 +1,26 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
-import Sidebar from './components/Sidebar';
-import Contact from './pages/Contact';
-import Dashboard from './pages/Dashboard';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Explore from "./pages/Explore";
+import Cart from "./pages/Cart";
+import Purchase from "./pages/Purchase";
+import Contact from "./pages/Contact";
+import Sidebar from "./components/Sidebar";
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="App">
-        <Sidebar/>
-
+    <BrowserRouter>
+      <Sidebar>
         <Routes>
-          <Route path="/" element={<Dashboard/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/" element={<Dashboard/>} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/purchase/history" element={<Purchase />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
-    </Router>
-  )
+      </Sidebar>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
