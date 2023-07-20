@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Bread1 from '../img/bread-1.png';
 import { FiPlus, FiStar } from 'react-icons/fi';
 
+import { useLocation } from "react-router-dom";
+
 const chunkArray = (array, size) => {
     const chunkedArray = [];
     for (let i = 0; i < array.length; i += size) {
@@ -17,6 +19,7 @@ const chunkArray = (array, size) => {
 
 const ProductTab = () => {
     const [activeTab, setActiveTab] = useState('all');
+    const { pathname } = useLocation();
     const products = [
         { id: 1, name: 'Pandesal', category: 'filipino', price: '100', rating: '4.5' },
         { id: 2, name: 'Mamon', category: 'spanish', price: '100', rating: '1.5' },
@@ -30,7 +33,10 @@ const ProductTab = () => {
     
     return (
         <div>
-            <h1 className='explore-products'>EXPLORE MORE PRODUCT CATEGORY</h1>
+            <h1 className='explore-products'>
+                { pathname === "/cart" ? "SUGGESTED PRODUCT FOR YOU" : "EXPLORE MORE PRODUCT CATEGORY" }
+                
+            </h1>
             <div>
                 <ul className="nav nav-tabs">
                 <li className="nav-item">
