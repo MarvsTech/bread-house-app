@@ -95,17 +95,23 @@ main {
 
 .account-container {
   display: flex;
+  justify-content: end;
+}
+.account-container button {
+  display: flex !important;
   justify-content: flex-end;
   align-items: center;
+  background-color: #fff !important;
+  border: none !important;
 }
-.account-container img {
+.account-container button img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 3px solid #033C3C;
   margin-right: 5px;
 }
-.account-container h1 {
+.account-container button h1 {
   color: #033C3C;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
@@ -636,4 +642,41 @@ footer .container .contact-info-container .contact-info small {
 
 .product-name-table {
   text-align: left;
+}
+
+.modal-dialog .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.modal-dialog .modal-content .modal-body h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #033C3C;
+}
+.modal-dialog .modal-content .modal-footer {
+  justify-content: center;
+}
+.modal-dialog .modal-content .modal-footer .logout {
+  background-color: #033C3C;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+.modal-dialog .modal-content .modal-footer .cancel {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border: 1px solid red;
+  color: red;
+  letter-spacing: 1px;
+}
+
+.modal-backdrop {
+  background-color: #033C3C;
 }/*# sourceMappingURL=app.css.map */
