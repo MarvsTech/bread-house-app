@@ -9,10 +9,10 @@ const Explore = () => {
       <section className='account-section'>
         <AccountTab />
       </section>
-      <section className="product-category">
+      <section className="product-category my-5">
         <ProductTab />
       </section>
-      <section className="footer">
+      <section className="footer mt-auto">
         <Footer />
       </section>
     </div>

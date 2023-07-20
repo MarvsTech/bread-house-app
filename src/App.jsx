@@ -4,7 +4,6 @@ import Dashboard from "./pages/Dashboard";
 import Explore from "./pages/Explore";
 import Cart from "./pages/Cart";
 import Purchase from "./pages/Purchase";
-import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/purchase/history" element={<Purchase />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Sidebar>
     </BrowserRouter>
