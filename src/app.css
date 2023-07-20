@@ -22,7 +22,6 @@ main {
 .sidebar {
   background-color: #fff;
   color: #fff;
-  height: 100vh;
   width: 300px;
 }
 .sidebar .top_section {
@@ -82,14 +81,20 @@ main {
   color: #033C3C;
 }
 .sidebar .contact-us {
-  display: flex;
+  display: flex !important;
   justify-content: center;
-  margin-top: 100px;
+}
+.sidebar .a-link-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .account-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .account-container img {
   width: 50px;
@@ -545,21 +550,8 @@ footer .container .contact-info-container .contact-info small {
   opacity: 1 !important;
 }
 
-.banner-container {
-  margin-top: 50px;
-}
 .banner-container .banner-row {
   padding: 30px !important;
-}
-
-.product-slider {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.product-service {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .product-service {
@@ -570,10 +562,8 @@ footer .container .contact-info-container .contact-info small {
   justify-content: center;
 }
 
-.product-category {
-  margin-top: 50px;
-}
-
-.footer {
-  margin-top: 100px;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }/*# sourceMappingURL=app.css.map */

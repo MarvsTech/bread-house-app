@@ -50,17 +50,20 @@ const Sidebar = ({children}) => {
                         <FiMenu onClick={toggle}/>
                     </div>
                 </div>
-                {
-                    menuItem.map((item, index) => (
-                        <NavLink to={item.path} key={index} className="navbar-link" activeclassName='active'>
-                            <div className="icon">{item.icon}</div>
-                            <div className="link-text" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
-                        </NavLink>
-                    ))
-                }
-
-                <div className="contact-us" style={{ display: isOpen ? "block" : "none" }}>
-                    <ContactCard />
+                <div class="a-link-container">
+                    <div className="link-wrapper">
+                        {
+                            menuItem.map((item, index) => (
+                                <NavLink to={item.path} key={index} className="navbar-link" activeclassName='active'>
+                                    <div className="icon">{item.icon}</div>
+                                    <div className="link-text" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
+                                </NavLink>
+                            ))
+                        }
+                    </div>
+                    <div className="contact-us" style={{ display: isOpen ? "block" : "none" }}>
+                        <ContactCard />
+                    </div>
                 </div>
             </div>
 
