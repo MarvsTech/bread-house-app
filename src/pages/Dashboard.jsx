@@ -12,23 +12,22 @@ const Dashboard = () => {
       <section className='account-section'>
         <AccountTab />
       </section>
-      <section className="product-banner">
+      <section className="product-banner my-5">
         <Banner />
       </section>
-      <section className="product-slider">
+      <section className="product-slider my-5">
         <ProductSlider />
       </section>
-      <section className="product-service">
+      <section className="product-service my-5">
         <Service />
       </section>
-      <section className="product-category">
+      <section className="product-category my-5">
         <ProductTab />
       </section>
-      <section className="footer">
+      <section className="footer mt-auto">
         <Footer />
       </section>
     </div>
-    
   )
 }
 
