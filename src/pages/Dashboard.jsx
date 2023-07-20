@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 const Dashboard = () => {
   return (
-    <>
+    <div class="main-content">
       <section className='account-section'>
         <AccountTab />
       </section>
@@ -27,7 +27,7 @@ const Dashboard = () => {
       <section className="footer">
         <Footer />
       </section>
-    </>
+    </div>
     
   )
 }
