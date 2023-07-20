@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 const Dashboard = () => {
   return (
-    <div class="main-content">
+    <div className="main-content">
       <section className='account-section'>
         <AccountTab />
       </section>

@@ -150,8 +150,10 @@ main {
 
 // for banner
 .banner-container {
+    align-items: center;
+    display: flex;
     width: 897px; 
-    height: 333.33px; 
+    height: 400px; 
     position: relative;
     left: 0px; 
     top: 0px; 
@@ -229,7 +231,6 @@ main {
         word-wrap: break-word;
     }
     .banner-description {
-        width: 85%;
         text-align: justify; 
         color: #5C5C5C; 
         font-size: 16px; 
@@ -252,6 +253,9 @@ main {
     }
 
     .product-icon-buy-container {
+        display: flex;
+        justify-content: flex-end;
+
         button {
             opacity: 1 !important;
             margin-top: 10px;
@@ -466,4 +470,43 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.product-counter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.product-counter-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid #033C3C;
+
+    .plus-icon-wrapper {
+        button {
+            @include custom-button;
+        }
+    }
+    .number-wrapper {
+        display: flex;
+        width: 50px;
+        height: 44px;
+        justify-content: center;
+        text-align: center;
+        align-items: end;
+        background-color: #fff;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+    .minus-icon-wrapper {
+        button {
+            @include custom-button;
+        }
+    }
+}
+.product-reset-wrapper {
+    button {
+        @include custom-button;
+    }
 }

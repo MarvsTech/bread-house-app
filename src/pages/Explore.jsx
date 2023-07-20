@@ -5,7 +5,7 @@ import ProductTab from '../components/ProductTab';
 
 const Explore = () => {
   return (
-    <div class="main-content">
+    <div className="main-content">
       <section className='account-section'>
         <AccountTab />
       </section>
