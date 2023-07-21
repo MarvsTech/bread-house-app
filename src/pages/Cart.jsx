@@ -16,9 +16,9 @@ const Cart = () => {
       <section className="product-category my-5">
         <ProductTab />
       </section>
-      {/* <section className="footer mt-auto">
+      <section className="footer mt-auto">
         <Footer />
-      </section> */}
+      </section>
     </div>
   )
 }

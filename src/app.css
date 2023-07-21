@@ -79,8 +79,8 @@ main {
   transition: all 0.5s;
 }
 .sidebar .navbar-link.active {
-  background-color: #fff;
-  color: #033C3C;
+  background-color: #033C3C;
+  color: #fff;
 }
 .sidebar .contact-us {
   display: flex !important;
@@ -211,7 +211,26 @@ main {
   font-size: 20px;
   padding: 3px;
 }
+@media (max-width: 600px) {
+  .product-card .product-card-container {
+    padding: 10px;
+  }
+  .product-card .card-body img {
+    width: 100%;
+  }
+}
 
+@media (max-width: 600px) {
+  .product-card-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-body img {
+    width: 100%;
+  }
+}
 .banner-container {
   align-items: center;
   display: flex;
@@ -353,13 +372,35 @@ footer .container .footer-heading .social-icon-container h6 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
+footer .container .footer-heading .social-icon-container .icons {
+  display: flex;
+  align-items: center;
+}
 footer .container .footer-heading .social-icon-container .icons svg {
   margin-right: 5px;
   font-size: 50px;
   background: #fff;
-  border: 2px solid;
+  border: 2px solid #033C3C;
+  color: #033C3C;
   padding: 10px;
   border-radius: 50px;
+  transition: color 0.3s ease;
+}
+footer .container .footer-heading .social-icon-container .icons svg.hover {
+  fill: #033C3C;
+  color: #fff;
+  border: 2px solid #033C3C;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  footer .container .footer-heading {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+  }
+}
+footer .container .bread-category-container {
+  display: flex;
+  justify-content: center;
 }
 footer .container .bread-category-container .bread-category h6 {
   font-size: 16px;
@@ -372,6 +413,11 @@ footer .container .bread-category-container .bread-category small ul li {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
+@media (max-width: 600px) {
+  footer .container .bread-category-container {
+    justify-content: flex-start;
+  }
+}
 footer .container .contact-info-container .contact-info h6 {
   font-size: 16px;
   font-weight: bold;
@@ -383,10 +429,14 @@ footer .container .contact-info-container .contact-info small {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
-
-.bread-category-container {
-  display: flex;
-  justify-content: center;
+@media (max-width: 600px) {
+  footer .container .row {
+    flex-direction: column-reverse;
+  }
+  footer .container .row .contact-info {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+  }
 }
 
 .footer-right {
@@ -426,6 +476,11 @@ footer .container .contact-info-container .contact-info small {
   height: 114px;
   left: 11px;
   position: relative;
+}
+@media (max-width: 600px) {
+  .carousel-item .card-column .product-image {
+    width: 100%;
+  }
 }
 .carousel-item .card-column .product-name {
   left: 10px;
@@ -607,9 +662,6 @@ footer .container .contact-info-container .contact-info small {
   .banner-container .banner-row div .product-counter-container .product-reset-wrapper button svg {
     font-size: 30px;
   }
-  .banner-container .banner-row div div .banner-description {
-    font-size: 12px;
-  }
   .banner-container .banner-row div .row .product-icon-info-container {
     width: unset;
   }
@@ -684,8 +736,18 @@ footer .container .contact-info-container .contact-info small {
   color: #fff;
   letter-spacing: 1px;
 }
+@media (max-width: 600px) {
+  .product-table thead tr {
+    font-size: 16px;
+  }
+}
 .product-table tbody tr td {
   font-size: 20px;
+}
+@media (max-width: 600px) {
+  .product-table tbody tr td {
+    font-size: 16px;
+  }
 }
 
 .product-name-table {
