@@ -14,19 +14,19 @@ const Service = () => {
     <>
         <Container>
             <Row>
-                <Col xs={3}>
+                <Col md={3}>
                     <img src={Quality} alt="Quality Product" />
                     <p>Quality Product</p>
                 </Col>
-                <Col xs={3}>
+                <Col md={3}>
                     <img src={Shipping} alt="Free Shipping" />
                     <p>Free Shipping</p>
                 </Col>
-                <Col xs={3}>
+                <Col md={3}>
                     <img src={Return} alt="14-Day Return" />
                     <p>14-Day Return</p>
                 </Col>
-                <Col xs={3}>
+                <Col md={3}>
                     <img src={Support} alt="24/7 Support" />
                     <p>24/7 Support</p>
                 </Col>
