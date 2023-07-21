@@ -561,6 +561,11 @@ footer {
             flex-direction: column;
             align-items: center;
 
+            svg {
+                margin-top: 50px;
+                font-size: 50px;
+            }
+
             img {
                 width: 200px;
             }
@@ -571,24 +576,27 @@ footer {
                 text-transform: uppercase;
                 font-weight: bold;
                 color: #033C3C;
+                text-align: center;
             }
         }
         .modal-footer {
             justify-content: center;
 
             .logout {
-                background-color: #033C3C;
-                text-align: center;
-                font-family: $primary-font;
-                letter-spacing: 1px;
+                @include custom-modal-button;
+                color: $main-color;
+                border: 2px solid $main-color;
+            }
+            .purchase {
+                @include custom-modal-button;
+                color: $main-color;
+                border: 2px solid $main-color;
             }
             .cancel {
-                text-align: center;
-                font-family: $primary-font;
-                background-color: #fff;
+                @include custom-modal-button;
+                border: 1px solid $main-color;
+                background-color: red;
                 border: 1px solid red;
-                color: red;
-                letter-spacing: 1px;
             }
         }
     }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { FiStar, FiThumbsUp, FiHeart, FiEye, FiShoppingBag } from "react-icons/fi";
 
 import Bread1 from '../img/bread-1.png';
@@ -7,12 +7,18 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 import { useLocation } from "react-router-dom";
 import ProductCounter from './ProductCounter';
 
 const Banner = () => {
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     const { pathname } = useLocation();
+
     return (
         <Container className='banner-container'>
             <Row className='banner-row'>
@@ -54,11 +60,26 @@ const Banner = () => {
                         </Col>
                         <Col sm={6} className='product-icon-buy-container'>
                             <FiShoppingBag />
-                            <Button variant="primary" size="md" disabled>Buy Now</Button>
+                            <Button variant="primary" size="md" onClick={handleShow} >Buy Now</Button>
                         </Col>
                     </Row>
                 </Col>
             </Row>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Body>
+                <FiShoppingBag />
+                <h1>ARE YOU SURE YOU WANT TO PURCHASE THIS PRODUCTS?</h1>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button onClick={handleClose} className='purchase'>
+                    PURCHASE
+                </Button>
+                <Button onClick={handleClose} className='cancel'>
+                    CANCEL
+                </Button>
+                </Modal.Footer>
+            </Modal>
         </Container>
     )
 }
