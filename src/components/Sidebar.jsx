@@ -1,42 +1,39 @@
-import React, { useState } from 'react'
-import { 
-    FiHome,
-    FiCompass,
-    FiShoppingBag,
-    FiBook,
-    FiSend,
-    FiMenu
-} from "react-icons/fi";
+import React, { useState } from 'react';
+import { FiHome, FiCompass, FiShoppingBag, FiBook, FiSend, FiMenu } from "react-icons/fi";
 import { NavLink } from 'react-router-dom';
 import Logo from '../img/logo.png';
 import ContactCard from './ContactCard';
 
 const Sidebar = ({children}) => {
-    const[isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(true);
     const toggle = () => setIsOpen(!isOpen);
     const menuItem = [
         {
             path: "/",
             name: "Dashboard",
             icon: <FiHome />,
-        },{
+        },
+        {
             path: "/explore",
             name: "Explore",
             icon: <FiCompass />,
-        },{
+        },
+        {
             path: "/cart",
             name: "Cart",
             icon: <FiShoppingBag />,
-        },{
+        },
+        {
             path: "/purchase/history",
             name: "Purchase History",
             icon: <FiBook />,
-        },{
+        },
+        {
             path: "/contact",
             name: "Contact us",
             icon: <FiSend />,
         }
-    ]
+    ].filter(item => isOpen || item.path !== "/contact");
 
     return (
         <>
@@ -54,16 +51,18 @@ const Sidebar = ({children}) => {
                     <div className="link-wrapper">
                         {
                             menuItem.map((item, index) => (
-                                <NavLink to={item.path} key={index} className="navbar-link" activeclassName='active'>
+                                <NavLink to={item.path} key={index} className="navbar-link" activeClassName='active'>
                                     <div className="icon">{item.icon}</div>
                                     <div className="link-text" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
                                 </NavLink>
                             ))
                         }
                     </div>
-                    <div className="contact-us" style={{ display: isOpen ? "block" : "none" }}>
-                        <ContactCard />
-                    </div>
+                    {isOpen && ( 
+                        <div className="contact-us">
+                            <ContactCard />
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -74,4 +73,4 @@ const Sidebar = ({children}) => {
     )
 }
 
-export default Sidebar
+export default Sidebar;
