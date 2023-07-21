@@ -17,19 +17,16 @@ const chunkArray = (array, size) => {
     return chunkedArray;
 };
 
-const ProductTab = () => {
+const MobileProductTab = () => {
     const [activeTab, setActiveTab] = useState('all');
     const { pathname } = useLocation();
     const products = [
         { id: 1, name: 'Pandesal', category: 'filipino', price: '100', rating: '4.5' },
-        { id: 2, name: 'Mamon', category: 'spanish', price: '100', rating: '1.5' },
-        { id: 3, name: 'Siomai', category: 'filipino', price: '110', rating: '5.5' },
-        { id: 4, name: 'Kalderita', category: 'filipino', price: '120', rating: '2.5' },
-        { id: 5, name: 'Gisado', category: 'filipino', price: '130', rating: '6.5' },
+        { id: 2, name: 'Mamon', category: 'spanish', price: '100', rating: '1.5' }
     ];
 
     const filteredProducts = activeTab === 'all' ? products : products.filter(product => product.category === activeTab);
-    const chunkedProducts = chunkArray(filteredProducts, 5);
+    const chunkedProducts = chunkArray(filteredProducts, 2);
     
     return (
         <div className='container'>
@@ -111,6 +108,6 @@ const ProductTab = () => {
             </div>
         </div>
     );
-};
+}
 
-export default ProductTab;
+export default MobileProductTab

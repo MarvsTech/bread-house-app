@@ -14,11 +14,11 @@ html, body {
 }
 
 main {
-  background-color: #fff;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  width: 100%;
 }
 
 .sidebar {
@@ -28,7 +28,9 @@ main {
 }
 .sidebar .top_section {
   display: flex;
+  justify-content: center;
   align-items: center;
+  justify-content: unset;
   padding: 20px 15px;
 }
 .sidebar .top_section .logo-container {
@@ -88,6 +90,8 @@ main {
 }
 .sidebar .a-link-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   height: calc(100% - 89px) !important;
@@ -95,12 +99,17 @@ main {
 
 .account-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: unset;
   justify-content: end;
 }
 .account-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex !important;
   justify-content: flex-end;
-  align-items: center;
   background-color: #fff !important;
   border: none !important;
 }
@@ -232,8 +241,10 @@ main {
   }
 }
 .banner-container {
-  align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: unset;
   width: 897px;
   height: 400px;
   position: relative;
@@ -245,6 +256,8 @@ main {
 .banner-container .image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: unset;
 }
 .banner-container .image-container .blur-1 {
   width: 211px;
@@ -331,6 +344,9 @@ main {
 }
 .banner-container .product-icon-buy-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: unset;
   justify-content: flex-end;
 }
 .banner-container .product-icon-buy-container button {
@@ -354,8 +370,11 @@ footer .container .heading-container {
 }
 footer .container .heading-container p {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 5px;
   align-items: end;
+  justify-content: unset;
   font-size: 20px;
   font-weight: bold;
   color: #033C3C;
@@ -374,7 +393,9 @@ footer .container .footer-heading .social-icon-container h6 {
 }
 footer .container .footer-heading .social-icon-container .icons {
   display: flex;
+  justify-content: center;
   align-items: center;
+  justify-content: unset;
 }
 footer .container .footer-heading .social-icon-container .icons svg {
   margin-right: 5px;
@@ -401,6 +422,8 @@ footer .container .footer-heading .social-icon-container .icons svg.hover {
 footer .container .bread-category-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: unset;
 }
 footer .container .bread-category-container .bread-category h6 {
   font-size: 16px;
@@ -448,6 +471,9 @@ footer .container .contact-info-container .contact-info small {
 .carousel-item .card-column {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: unset;
+  margin: 5px;
 }
 .carousel-item .card-column .card {
   width: 100%;
@@ -616,6 +642,9 @@ footer .container .contact-info-container .contact-info small {
   position: relative;
 }
 .tab-content .tab-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex !important;
   justify-content: space-around;
 }
@@ -662,34 +691,46 @@ footer .container .contact-info-container .contact-info small {
   .banner-container .banner-row div .product-counter-container .product-reset-wrapper button svg {
     font-size: 30px;
   }
-  .banner-container .banner-row div .row .product-icon-info-container {
+  .banner-container .banner-row div .row .product-icon-info-container,
+  .banner-container .banner-row div .row .product-icon-buy-container {
     width: unset;
   }
 }
 
 .product-service {
-  flex-wrap: nowrap;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   background-color: #fff;
   padding: 5px;
-  justify-content: center;
+  align-items: unset;
 }
 
 .main-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+  width: 100%;
+  overflow: hidden;
 }
 
 .product-counter-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
+  align-items: unset;
   margin-bottom: 10px;
 }
 
 .product-counter-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
+  justify-content: unset;
   border: 2px solid #033C3C;
 }
 .product-counter-wrapper .plus-icon-wrapper button {
@@ -699,9 +740,10 @@ footer .container .contact-info-container .contact-info small {
 }
 .product-counter-wrapper .number-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 44px;
-  justify-content: center;
   text-align: center;
   align-items: end;
   background-color: #fff;
@@ -756,8 +798,10 @@ footer .container .contact-info-container .contact-info small {
 
 .modal-dialog .modal-content .modal-body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  justify-content: unset;
+  flex-direction: column;
 }
 .modal-dialog .modal-content .modal-body svg {
   margin-top: 50px;
