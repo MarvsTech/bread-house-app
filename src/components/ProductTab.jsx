@@ -77,7 +77,7 @@ const ProductTab = () => {
                     {chunkedProducts.map((row, rowIndex) => (
                         <Row key={rowIndex}>
                         {row.map(product => (
-                            <Col key={product.id}>
+                            <Col key={product.id} className='product-card-container'>
                             <Card className="product-card" key={product.id}>
                                 <Card.Body>
                                 <div className="blur-background"></div>

@@ -28,7 +28,7 @@ const ProductTable = () => {
     );
     return (
         <>
-            <Table striped bordered hover className='product-table'>
+            <Table striped bordered hover className='product-table' responsive="sm">
                 <thead>
                     <tr>
                         <th>
@@ -37,7 +37,7 @@ const ProductTable = () => {
                         <th>#</th>
                         <th className='product-name-table'>Products</th>
                         <th>Price</th>
-                        <th>Quantity</th>
+                        <th>Qty</th>
                         <th>Total</th>
                         <th></th>
                     </tr>
