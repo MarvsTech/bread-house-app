@@ -22,23 +22,23 @@ const Banner = () => {
     return (
         <Container className='banner-container'>
             <Row className='banner-row'>
-                <Col sm={6} className='image-container'>
+                <Col md={6} className='image-container'>
                     <div className="blur-1"></div>
                     <div className="blur-2"></div>
                     <div className="blur-3"></div>
                     <img className="banner-image" src={Bread1} alt='Bread'/>
                 </Col>
-                <Col sm={6}>
+                <Col md={6}>
                     <div className="banner-title">BAGUETTE VIENNOISE</div>
                     <div className='banner-star-container'>
-                        <Col sm={2}>
+                        <Col md={2} sm={6}>
                             <FiStar />
                             <FiStar />
                             <FiStar />
                             <FiStar />
                             <FiStar />
                         </Col>
-                        <Col sm={10}>
+                        <Col md={10} sm={6}>
                             <p className="banner-star-rating">(200+ REVIEWS)</p>
                         </Col>
                     </div>
@@ -53,12 +53,12 @@ const Banner = () => {
                     <div className="banner-sub-title">PRICE: <span>PHP 100.00</span></div>
                     
                     <Row>
-                        <Col sm={6} className='product-icon-info-container'>
+                        <Col md={6} className='product-icon-info-container'>
                             <FiThumbsUp />
                             <FiHeart />
                             <FiEye />
                         </Col>
-                        <Col sm={6} className='product-icon-buy-container'>
+                        <Col md={6} className='product-icon-buy-container'>
                             <FiShoppingBag />
                             <Button variant="primary" size="md" onClick={handleShow} >Buy Now</Button>
                         </Col>
