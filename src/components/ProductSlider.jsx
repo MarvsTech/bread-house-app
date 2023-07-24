@@ -1,7 +1,6 @@
 import React from 'react';
-import { FiPlus, FiStar, FiChevronLeft } from "react-icons/fi";
+import { FiPlus, FiStar } from "react-icons/fi";
 import { Carousel, Card, Container, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 
 // Import the images for the carousel
 import Bread1 from '../img/bread-1.png';
