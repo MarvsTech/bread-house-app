@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/bread-house-app/static/css/main.7ffca239.css",
-    "main.js": "/bread-house-app/static/js/main.a5947897.js",
-    "static/media/bread-3.png": "/bread-house-app/static/media/bread-3.f65437be1968592f2c3d.png",
-    "static/media/bread-1.png": "/bread-house-app/static/media/bread-1.db6b2382b01e576f4a05.png",
-    "static/media/bread-2.png": "/bread-house-app/static/media/bread-2.cfe94f668dd46d74d4ea.png",
-    "static/media/CUSTOMER SERVICE.svg": "/bread-house-app/static/media/CUSTOMER SERVICE.f87a1383f665ad323fcec23d670d653a.svg",
-    "static/media/profile.png": "/bread-house-app/static/media/profile.3c37a790f9676542b372.png",
-    "index.html": "/bread-house-app/index.html",
-    "main.7ffca239.css.map": "/bread-house-app/static/css/main.7ffca239.css.map",
-    "main.a5947897.js.map": "/bread-house-app/static/js/main.a5947897.js.map"
+    "main.css": "/static/css/main.442272c8.css",
+    "main.js": "/static/js/main.b1a6b0aa.js",
+    "static/media/bread-3.png": "/static/media/bread-3.f65437be1968592f2c3d.png",
+    "static/media/bread-1.png": "/static/media/bread-1.db6b2382b01e576f4a05.png",
+    "static/media/bread-2.png": "/static/media/bread-2.cfe94f668dd46d74d4ea.png",
+    "static/media/CUSTOMER SERVICE.svg": "/static/media/CUSTOMER SERVICE.f87a1383f665ad323fcec23d670d653a.svg",
+    "static/media/profile.png": "/static/media/profile.3c37a790f9676542b372.png",
+    "index.html": "/index.html",
+    "main.442272c8.css.map": "/static/css/main.442272c8.css.map",
+    "main.b1a6b0aa.js.map": "/static/js/main.b1a6b0aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ffca239.css",
-    "static/js/main.a5947897.js"
+    "static/css/main.442272c8.css",
+    "static/js/main.b1a6b0aa.js"
   ]
 }
