@@ -99,6 +99,7 @@ main {
 }
 
 .account-container {
+  padding-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,7 +477,7 @@ footer .container .contact-info-container .contact-info small {
 }
 
 .carousel-item {
-  width: unset !important;
+  width: 100% !important;
 }
 .carousel-item .container .row {
   flex-wrap: unset !important;

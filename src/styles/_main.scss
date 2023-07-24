@@ -92,6 +92,7 @@ main {
 }
 
 .account-container {
+    padding-top: 10px;
     @include custom-product-position;
     align-items: unset;
     justify-content: flex-end;
@@ -452,7 +453,7 @@ footer {
 
 .carousel-item {
 
-    width: unset !important;
+    width: 100% !important;
     
     .container {
         .row {
