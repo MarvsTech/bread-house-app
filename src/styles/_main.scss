@@ -94,7 +94,7 @@ main {
 .account-container {
     @include custom-product-position;
     align-items: unset;
-    justify-content: end;
+    justify-content: flex-end;
 
     button {
         @include custom-product-position;

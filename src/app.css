@@ -103,7 +103,7 @@ main {
   justify-content: center;
   align-items: center;
   align-items: unset;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .account-container button {
   display: flex;
