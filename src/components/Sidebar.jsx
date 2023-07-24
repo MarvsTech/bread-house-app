@@ -66,7 +66,7 @@ const Sidebar = ({children}) => {
                 </div>
             </div>
 
-            <main>
+            <main style={{ maxWidth: isOpen ? "calc(100vw - 300px)" : "calc(100vw - 50px)" }}>
                 {children}
             </main>
         </>  

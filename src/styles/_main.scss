@@ -178,9 +178,14 @@ main {
     }
 }
 
-.product-card-container {
-    @media (max-width: 600px) {
-        padding: 10px;
+.row {
+
+    flex-wrap: unset !important;
+    
+    .product-card-container {
+        @media (max-width: 600px) {
+            padding: 10px;
+        }
     }
 }
 
@@ -446,51 +451,61 @@ footer {
 }
 
 .carousel-item {
-    .card-column {
-        @include custom-product-position;
-        align-items: unset;
-        margin: 5px;
 
-        .card {
-            @include custom-card;
-            position: relative !important; 
-            width: 100%;
-        }
-        .blur-background {
-            @include custom-blur-background;
-        }
-        .product-image {
-            @include custom-product-image;
-
-            @media (max-width: 600px) {
-                width: 100%;
-            }
-        }
-        .product-name {
-            @include custom-product-name;
-        }
-        .product-price {
-            @include custom-product-price;
+    width: unset !important;
     
-            span {
-                @include custom-product-price-span; 
-            }
-        }
-        .star-container {
-            @include custom-star-container; 
-        }
-        .product-ratings {
-            @include custom-product-rating;
-        }
+    .container {
+        .row {
+            flex-wrap: unset !important;
 
-        .plus-col {
-            @include custom-plus-col;
-    
-            .plus-btn {
-                @include custom-plus-btn;
+            .card-column {
+                @include custom-product-position;
+                align-items: unset;
+                margin: 5px;
+        
+                .card {
+                    @include custom-card;
+                    position: relative !important; 
+                    width: 100%;
+                }
+                .blur-background {
+                    @include custom-blur-background;
+                }
+                .product-image {
+                    @include custom-product-image;
+        
+                    @media (max-width: 600px) {
+                        width: 100%;
+                    }
+                }
+                .product-name {
+                    @include custom-product-name;
+                }
+                .product-price {
+                    @include custom-product-price;
+            
+                    span {
+                        @include custom-product-price-span; 
+                    }
+                }
+                .star-container {
+                    @include custom-star-container; 
+                }
+                .product-ratings {
+                    @include custom-product-rating;
+                }
+        
+                .plus-col {
+                    @include custom-plus-col;
+            
+                    .plus-btn {
+                        @include custom-plus-btn;
+                    }
+                }
             }
         }
     }
+    
 }
   
 .carousel-control-prev-icon {

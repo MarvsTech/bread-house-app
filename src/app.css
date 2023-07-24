@@ -230,8 +230,11 @@ main {
   }
 }
 
+.row {
+  flex-wrap: unset !important;
+}
 @media (max-width: 600px) {
-  .product-card-container {
+  .row .product-card-container {
     padding: 10px;
   }
 }
@@ -472,14 +475,20 @@ footer .container .contact-info-container .contact-info small {
   text-align: center;
 }
 
-.carousel-item .card-column {
+.carousel-item {
+  width: unset !important;
+}
+.carousel-item .container .row {
+  flex-wrap: unset !important;
+}
+.carousel-item .container .row .card-column {
   display: flex;
   justify-content: center;
   align-items: center;
   align-items: unset;
   margin: 5px;
 }
-.carousel-item .card-column .card {
+.carousel-item .container .row .card-column .card {
   width: 100%;
   height: 257px !important;
   left: 0px;
@@ -490,7 +499,7 @@ footer .container .contact-info-container .contact-info small {
   position: relative !important;
   width: 100%;
 }
-.carousel-item .card-column .blur-background {
+.carousel-item .container .row .card-column .blur-background {
   width: 154px;
   height: 19px;
   left: 21px;
@@ -501,18 +510,18 @@ footer .container .contact-info-container .contact-info small {
   border-radius: 9999px;
   filter: blur(9px);
 }
-.carousel-item .card-column .product-image {
+.carousel-item .container .row .card-column .product-image {
   width: 186px;
   height: 114px;
   left: 11px;
   position: relative;
 }
 @media (max-width: 600px) {
-  .carousel-item .card-column .product-image {
+  .carousel-item .container .row .card-column .product-image {
     width: 100%;
   }
 }
-.carousel-item .card-column .product-name {
+.carousel-item .container .row .card-column .product-name {
   left: 10px;
   top: 153px;
   position: absolute;
@@ -523,7 +532,7 @@ footer .container .contact-info-container .contact-info small {
   text-transform: uppercase;
   word-wrap: break-word;
 }
-.carousel-item .card-column .product-price {
+.carousel-item .container .row .card-column .product-price {
   left: 12px;
   top: 177px;
   position: absolute;
@@ -533,14 +542,14 @@ footer .container .contact-info-container .contact-info small {
   font-weight: 500;
   word-wrap: break-word;
 }
-.carousel-item .card-column .product-price span {
+.carousel-item .container .row .card-column .product-price span {
   color: #033C3C;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   word-wrap: break-word;
 }
-.carousel-item .card-column .star-container {
+.carousel-item .container .row .card-column .star-container {
   width: 60px;
   height: 16.67px;
   left: 12px;
@@ -548,7 +557,7 @@ footer .container .contact-info-container .contact-info small {
   position: absolute;
   display: flex;
 }
-.carousel-item .card-column .product-ratings {
+.carousel-item .container .row .card-column .product-ratings {
   width: 38px;
   height: 12px;
   left: 22px;
@@ -560,11 +569,11 @@ footer .container .contact-info-container .contact-info small {
   font-weight: 700;
   word-wrap: break-word;
 }
-.carousel-item .card-column .plus-col {
+.carousel-item .container .row .card-column .plus-col {
   display: flex;
   justify-content: flex-end;
 }
-.carousel-item .card-column .plus-col .plus-btn {
+.carousel-item .container .row .card-column .plus-col .plus-btn {
   background-color: #033C3C;
   border-radius: 50px;
   color: #fff;
