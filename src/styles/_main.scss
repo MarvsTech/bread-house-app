@@ -1,5 +1,6 @@
 #root {
     display: flex;
+    overflow-x: hidden;
 }
 
 main {
@@ -314,8 +315,16 @@ main {
 }
 
 // for services
-.col-3 {
-    text-align: center;
+.product-service {
+    .container {
+        .row {
+            text-align: center;
+
+            .col-3 {
+                text-align: center;
+            }
+        }
+    }
 }
 
 // for footer
